@@ -10,7 +10,8 @@ const forecast = (latitude, longitude, callback) => {
     
     } else {
         const weatherDATA = body.current
-        callback(undefined,'It is currently ' + weatherDATA.temperature + ' Celsius out. There is ' + weatherDATA.precip + '% to rain. It is ' + weatherDATA.weather_descriptions[0] + '.')
+        callback(undefined,'It is currently ' + weatherDATA.temperature +  ' Celsius out.' + "\n" +'There is ' + weatherDATA.precip + '% to rain. ' + '\n' + 'It is ' + weatherDATA.weather_descriptions[0] + ".\n" +
+        ' Wind speed: ' + weatherDATA.wind_speed + "." + ' Humidity: ' + weatherDATA.humidity + "% .")
     }
 })
 }
